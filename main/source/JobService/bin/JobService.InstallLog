@@ -1,0 +1,13 @@
+﻿Assembly C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe wordt geïnstalleerd.
+Beïnvloede parameters:
+   logtoconsole = 
+   logfile = C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.InstallLog
+   assemblypath = C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe
+Er zijn geen openbare installatieprogramma's met het kenmerk RunInstallerAttribute.Yes gevonden in de assembly C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe.
+Assembly C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe wordt toegekend.
+Beïnvloede parameters:
+   logtoconsole = 
+   logfile = C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.InstallLog
+   assemblypath = C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe
+Er zijn geen openbare installatieprogramma's met het kenmerk RunInstallerAttribute.Yes gevonden in de assembly C:\Source\Private\stovem\CertificateUpdater\JobService\bin\JobService.exe.
+InstallState-bestand verwijderen omdat er geen installatieprogramma's zijn.

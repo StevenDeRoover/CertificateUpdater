@@ -1,0 +1,14 @@
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.Console.deps.json
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.Console.runtimeconfig.json
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.Console.runtimeconfig.dev.json
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.Console.dll
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.Console.pdb
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.dll
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\bin\Debug\netcoreapp2.1\CertificateUpdater.pdb
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.csprojAssemblyReference.cache
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.csproj.CoreCompileInputs.cache
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.AssemblyInfoInputs.cache
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.AssemblyInfo.cs
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.csproj.CopyComplete
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.dll
+C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater.Console\obj\Debug\netcoreapp2.1\CertificateUpdater.Console.pdb
