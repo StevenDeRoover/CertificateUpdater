@@ -16,7 +16,7 @@ namespace JobService.Controllers
         [HttpGet, Route("checkcertificate")]
         public void CheckCertificate()
         {
-            RecurringJob.Trigger("CheckCertificateJob.Check");
+            BackgroundJob.Enqueue<CheckCertificateJob>(c => c.Check())
         }
     }
 }

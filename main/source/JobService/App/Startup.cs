@@ -29,6 +29,7 @@ class Startup
 
     private void SetupRecurringJobs()
     {
-        RecurringJob.AddOrUpdate<CheckCertificateJob>(x => x.Check(null), Cron.Hourly);
+        
+        RecurringJob.AddOrUpdate<CheckCertificateJob>(CheckCertificateJob.Id, x => x.Check(null), Cron.Hourly);
     }
 }

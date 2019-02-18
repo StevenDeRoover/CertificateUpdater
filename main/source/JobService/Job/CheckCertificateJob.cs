@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using JobService.Extensions;
 
 namespace JobService.Job
 {
@@ -15,6 +16,8 @@ namespace JobService.Job
         public static string Id = nameof(CheckCertificateJob);
         public void Check(PerformContext context)
         {
+            var viewBag = context.GetViewBag();
+
             context.WriteLine(ConsoleTextColor.Blue, "Start check certificate job");   
         }
     }

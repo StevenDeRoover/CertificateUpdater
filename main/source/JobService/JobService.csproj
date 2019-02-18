@@ -101,8 +101,10 @@
   <ItemGroup>
     <Compile Include="App\Startup.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Extensions\PerformContextExtensions.cs" />
     <Compile Include="JobService.cs" />
     <Compile Include="Job\CheckCertificateJob.cs" />
+    <Compile Include="Job\IsCertificateValidJob.cs" />
     <Compile Include="Logging\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

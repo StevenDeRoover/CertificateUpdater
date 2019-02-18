@@ -1397,7 +1397,7 @@
       ]
     },
     "Newtonsoft.Json/10.0.3": {
-      "sha512": "MoATFm6YJyk5OdqDdxDWfKe5dkY3Cygu0wrpKPH/LbWtMmSuD/3G/JIInt9sIJN7hKQOFYCIb2UjLc2vO5byQQ==",
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
       "type": "package",
       "path": "newtonsoft.json/10.0.3",
       "hasTools": true,
@@ -4668,23 +4668,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Install\\.nuget\\packages\\": {},
+    "C:\\Users\\Steven.DeRoover\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\Private\\stovem\\CertificateUpdater\\CertificateUpdater\\CertificateUpdater.csproj",
+      "projectUniqueName": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj",
       "projectName": "CertificateUpdater",
-      "projectPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\CertificateUpdater\\CertificateUpdater.csproj",
-      "packagesPath": "C:\\Users\\Install\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\CertificateUpdater\\obj\\",
+      "projectPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj",
+      "packagesPath": "C:\\Users\\Steven.DeRoover\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Install\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Steven.DeRoover\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4692,7 +4692,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/dcanv/_packaging/DCAPackages/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
