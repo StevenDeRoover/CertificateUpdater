@@ -27,23 +27,28 @@ namespace CertificateUpdater.Console
 
         static async Task<bool> Check()
         {
-            var checker = new CertificateChecker("c:\\temp\\key.txt", "c:\\temp\\certificate.pem", "stevenderoover@gmail.com");
-            return await checker.CheckShouldRenewCertificate();
+            return false;
+            //string accountKey = @"";
+            //string certificate = 
+
+            //var checker = new CertificateChecker("c:\\temp\\key.txt", "c:\\temp\\certificate.pem", "stevenderoover@gmail.com");
+            //return await checker.CheckShouldRenewCertificate();
         }
 
         static async Task<bool> Renew()
         {
-            var checker = new CertificateChecker("c:\\temp\\key.txt", "c:\\temp\\certificate.pem", "stevenderoover@gmail.com", (files) =>
-            {
-                using (var zipStream = ZipFiles(files))
-                {
-                    SaveZipFile(zipStream);
-                }                
-                System.Console.WriteLine("Files are saved to c:\\temp\\challenges.zip.  Copy files to server, and then press enter");
-                System.Console.Read();
-            }, SavePemToRouter);
+            return false;
+            //var checker = new CertificateChecker("c:\\temp\\key.txt", "c:\\temp\\certificate.pem", "stevenderoover@gmail.com", (files) =>
+            //{
+            //    using (var zipStream = ZipFiles(files))
+            //    {
+            //        SaveZipFile(zipStream);
+            //    }                
+            //    System.Console.WriteLine("Files are saved to c:\\temp\\challenges.zip.  Copy files to server, and then press enter");
+            //    System.Console.Read();
+            //}, SavePemToRouter);
 
-            return await checker.RenewCertificate(new string[] { "cloud.stovem.com", "cp.stovem.com", "plex.stovem.com", "radarr.stovem.com", "sab.stovem.com", "sonarr.stovem.com", "transmission.stovem.com", "www.stovem.com" }, "www.stovem.com");
+            //return await checker.RenewCertificate(new string[] { "cloud.stovem.com", "cp.stovem.com", "plex.stovem.com", "radarr.stovem.com", "sab.stovem.com", "sonarr.stovem.com", "transmission.stovem.com", "www.stovem.com" }, "www.stovem.com");
         }
 
         private static void SavePemToRouter(string pem)

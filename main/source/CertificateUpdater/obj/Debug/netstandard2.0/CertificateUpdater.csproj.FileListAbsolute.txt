@@ -7,3 +7,12 @@ C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater\bin\Debug\netstan
 C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.dll
 C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.pdb
 C:\Source\Private\stovem\CertificateUpdater\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.csprojAssemblyReference.cache
+C:\Source\Private\main\source\CertificateUpdater\bin\Debug\netstandard2.0\CertificateUpdater.deps.json
+C:\Source\Private\main\source\CertificateUpdater\bin\Debug\netstandard2.0\CertificateUpdater.dll
+C:\Source\Private\main\source\CertificateUpdater\bin\Debug\netstandard2.0\CertificateUpdater.pdb
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.csprojAssemblyReference.cache
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.csproj.CoreCompileInputs.cache
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.AssemblyInfoInputs.cache
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.AssemblyInfo.cs
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.dll
+C:\Source\Private\main\source\CertificateUpdater\obj\Debug\netstandard2.0\CertificateUpdater.pdb

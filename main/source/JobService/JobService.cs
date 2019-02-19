@@ -38,7 +38,6 @@ namespace JobService
             Logger.LogVerbose($"Using port {port}");
             WebApp.Start<Startup>($"http://+:{port}");
             Logger.LogVerbose($"Server listening at http://localhost:{port}");
-            Logger.LogVerbose($"Hangfire server listening at http://0.0.0.0:{port}/hangefire");
         }
 
         public void Stop()

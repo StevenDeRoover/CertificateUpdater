@@ -14,46 +14,52 @@ namespace CertificateUpdater
 {
     public class CertificateChecker
     {
-        private readonly string _accountKeyFileName;
-        private readonly string _currentPemFileName;
+        private string _accountKey;
+        private string _certificate;
         private readonly string _email;
         private readonly Action<Dictionary<string, byte[]>> _saveFileAction;
         private readonly Action<string> _actionAfterCreation;
 
-        public CertificateChecker(string accountKeyFileName, string currentPemFileName, string email) : this(accountKeyFileName, currentPemFileName, email, null, null)
+        public string Certificate { get => _certificate; set => _certificate = value; }
+        public string AccountKey { get => _accountKey; set => _accountKey = value; }
+
+        public CertificateChecker(string accountKey, string certificate)
+            :this(accountKey, certificate, null, null)
         { }
 
-        public CertificateChecker(string accountKeyFileName, string currentPemFileName, string email, Action<Dictionary<string, byte[]>> saveFileAction, Action<string> actionAfterCreation)
+        public CertificateChecker(string accountKey, string certificate, Action<Dictionary<string, byte[]>> saveFileAction, Action<string> actionAfterCreation)
         {
-            _accountKeyFileName = accountKeyFileName;
-            _currentPemFileName = currentPemFileName;
-            _email = email;
+            AccountKey = accountKey;
+            Certificate = certificate;
+            _email = "stevenderoover@gmail.com";
             _saveFileAction = saveFileAction;
             _actionAfterCreation = actionAfterCreation;
         }
+
+
+
 
         public async Task<bool> CheckShouldRenewCertificate()
         {
             return await Task<bool>.Run(() =>
             {
                 bool shouldRenew = default(bool);
-                FileStream fs = null;
                 try
                 {
                     X509CertificateParser certParser = new X509CertificateParser();
-                    fs = new FileStream(_currentPemFileName, FileMode.Open);
-                    X509Certificate cert = certParser.ReadCertificate(fs);
-                    var maxDate = cert.NotAfter.AddDays(-10);
-                    shouldRenew = (DateTime.Now.Date >= maxDate.Date);
+                    using (var memStream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(_certificate)))
+                    {
+                        X509Certificate cert = certParser.ReadCertificate(memStream);
+                        var maxDate = cert.NotAfter.AddDays(-10);
+                        shouldRenew = (DateTime.Now.Date >= maxDate.Date);
+                    }
                 }
                 catch
                 {
                 }
                 finally
                 {
-                    fs?.Close();
                 }
-                fs.Close();
                 return shouldRenew;
             });
         }
@@ -89,8 +95,9 @@ namespace CertificateUpdater
                         var certPem = cert.ToPem();
                         var privatePem = privateKey.ToPem();
 
-                        File.Move(_currentPemFileName, Path.Combine(Path.GetDirectoryName(_currentPemFileName), Path.GetFileNameWithoutExtension(_currentPemFileName) + "_backup" + DateTime.Now.ToString("yyyyMMddHHmmss") +  Path.GetExtension(_currentPemFileName)));
-                        File.WriteAllText(_currentPemFileName, privatePem + certPem);
+                        //File.Move(_currentPemFileName, Path.Combine(Path.GetDirectoryName(_currentPemFileName), Path.GetFileNameWithoutExtension(_currentPemFileName) + "_backup" + DateTime.Now.ToString("yyyyMMddHHmmss") + Path.GetExtension(_currentPemFileName)));
+                        //File.WriteAllText(_currentPemFileName, privatePem + certPem);
+                        Certificate = privatePem + certPem;
 
                         _actionAfterCreation(privatePem = certPem);
                     }
@@ -140,15 +147,15 @@ namespace CertificateUpdater
         private async Task<AcmeContext> Login()
         {
             AcmeContext acme = default(AcmeContext);
-            if (string.IsNullOrWhiteSpace(File.ReadAllText(_accountKeyFileName)))
+            if (string.IsNullOrWhiteSpace(File.ReadAllText(AccountKey)))
             {
                 acme = new AcmeContext(WellKnownServers.LetsEncryptV2);
                 var account = await acme.NewAccount(_email, true);
-                File.WriteAllText(_accountKeyFileName, acme.AccountKey.ToPem());
+                AccountKey = acme.AccountKey.ToPem();
             }
             else
             {
-                var key = KeyFactory.FromPem(File.ReadAllText(_accountKeyFileName));
+                var key = KeyFactory.FromPem(File.ReadAllText(AccountKey));
                 acme = new AcmeContext(WellKnownServers.LetsEncryptV2, key);
                 var account = await acme.Account();
                 return acme;

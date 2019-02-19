@@ -1390,7 +1390,7 @@
   },
   "libraries": {
     "Certes/2.3.3": {
-      "sha512": "a6VtavVmfw4nJVJzLNPg+ZxQKkVy7fH/33NGImY096JXnWa/2735WlQRbvregFT+AwWb0mXbTBhfEbl809Pm4Q==",
+      "sha512": "oVRNqmApK0YNfZaZfaxtwFwWF5aNMiRPj33oJHWJUxW60mq6J61CWdex+Ghffyk7dafTVk8EBgzO4MAHOCgAJw==",
       "type": "package",
       "path": "certes/2.3.3",
       "files": [
@@ -1775,7 +1775,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -2004,7 +2004,7 @@
       ]
     },
     "Portable.BouncyCastle/1.8.1.4": {
-      "sha512": "ltDGnhjlScAJVzyU1cvXQNzf9+P08G98LQ/90tE8beCwvDW1cPdoMnlmPN3iADZmlmcM6nS+ksNxbQYR4GiaQQ==",
+      "sha512": "tbwNj323gU2Tdp+CpgkRuxGq8bo4dUp/KGLTvIct2iaL2N7iyMWB75T7MsVzVlHGJ2KwSNi7LMdYutcbhad6kw==",
       "type": "package",
       "path": "portable.bouncycastle/1.8.1.4",
       "files": [
@@ -2064,7 +2064,7 @@
       ]
     },
     "SSH.NET/2016.1.0": {
-      "sha512": "Ky0PcLxFj7UyK7zAfNDtdnQEEFKdIc8COiSqe69k13ACuSJNiHmvOwHkARAVFQ4VgsbVFLupgYiXes0O00wEWA==",
+      "sha512": "b0fcFFOE044KNRhq1uGujmK04ab+OzA9xARdeVCoZrY6I4D1IIaR6dn6qBIa+er4bJapGBhznDitwcRQpSRC0w==",
       "type": "package",
       "path": "ssh.net/2016.1.0",
       "files": [
@@ -2091,7 +2091,7 @@
       ]
     },
     "SshNet.Security.Cryptography/1.2.0": {
-      "sha512": "Gd87t3O1luT7tpoyx3NgH+ee2Xn7K1qh9VpDdayYf2HhddeempTX82ezGL7uIjxo48i/oIl7WNZZd6sTjjfVdQ==",
+      "sha512": "EeFsirrrkIK+cdlYsxukNjBN98cbU7eHfTYZEwxsbOa3dvgR/OhOD06C0sTxvNPhe4UQ6yM0p1sKcT69jqgjTw==",
       "type": "package",
       "path": "sshnet.security.cryptography/1.2.0",
       "files": [
@@ -2124,11 +2124,12 @@
       ]
     },
     "System.Buffers/4.3.0": {
-      "sha512": "ratu44uTIHgeBeI0dE8DWvmXVBSo4u7ozRZZHOMmK/JPpYyo0dAfgSiHlpiObMQ5lEtEyIXA40sKRYg5J6A8uQ==",
+      "sha512": "Pcv2b27ffpu09pjN3PgbnQWYEdhOBcesYYsmQO/tZC8Imw74TJJ8X1j+/+Q7uWprz0/sQiUpuCmYsY1w5GSMvg==",
       "type": "package",
       "path": "system.buffers/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.1/.xml",
@@ -2619,7 +2620,7 @@
       ]
     },
     "System.Diagnostics.TraceSource/4.0.0": {
-      "sha512": "q5bGzzvXVi+dIMiPWRhXZV7r+Os3TEOuRW5LHsAUDGpqJHol8XiLokVpsgAfPqHHNkyx1bbv5lRZqRkRrGZKxQ==",
+      "sha512": "6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
       "type": "package",
       "path": "system.diagnostics.tracesource/4.0.0",
       "files": [
@@ -3343,7 +3344,7 @@
       ]
     },
     "System.Net.NameResolution/4.0.0": {
-      "sha512": "tzeTP0r8uMf10LVrbwujDiQSTXNJzjlo2LquRV3b5FHeE2ONwe+EZX9xVmG+KFYaJyFNb2sTNBHA1k1tfSUglw==",
+      "sha512": "JdqRdM1Qym3YehqdKIi5LHrpypP4JMfxKQSNCJ2z4WawkG0il+N3XfNeJOxll2XrTnG7WgYYPoeiu/KOwg0DQw==",
       "type": "package",
       "path": "system.net.nameresolution/4.0.0",
       "files": [
@@ -4449,7 +4450,7 @@
       ]
     },
     "System.Security.Claims/4.0.1": {
-      "sha512": "ReS8CDbfx2CJ+e1ZScaaBONbZ9Bz8K1DYFOHr5Q5e+KK/8/KWR0Q9kB9AhM1d9EqntCo7iJ/J5YrZmXIKvvepw==",
+      "sha512": "4Jlp0OgJLS/Voj1kyFP6MJlIYp3crgfH8kNQk2p7+4JYfc1aAmh9PZyAMMbDhuoolGNtux9HqSOazsioRiDvCw==",
       "type": "package",
       "path": "system.security.claims/4.0.1",
       "files": [
@@ -4595,7 +4596,7 @@
       ]
     },
     "System.Security.Principal/4.0.1": {
-      "sha512": "kri0yLEMVPPXnISbIWmh0BLv0hUeWoZNax8Lq+x65OlkZ/mSy9q5IsvcH3RTnyItGz7mclpsSlBzyxs+JzBdDg==",
+      "sha512": "On+SKhXY5rzxh/S8wlH1Rm0ogBlu7zyHNxeNBiXauNrhHRXAe9EuX8Yl5IOzLPGU5Z4kLWHMvORDOCG8iu9hww==",
       "type": "package",
       "path": "system.security.principal/4.0.1",
       "files": [
@@ -4654,7 +4655,7 @@
       ]
     },
     "System.Security.Principal.Windows/4.0.0": {
-      "sha512": "VcZzSF6SdNtjC0DEG6XeP0d2cSIKyaebAjDNGlz2+lEGK3zEfZiQjtQS3jY/L8c8vAMMHwZMXUq3Q6gtEGxTKg==",
+      "sha512": "iFx15AF3RMEPZn3COh8+Bb2Thv2zsmLd93RchS1b8Mj5SNYeGqbYNCSn5AES1+gq56p4ujGZPrl0xN7ngkXOHg==",
       "type": "package",
       "path": "system.security.principal.windows/4.0.0",
       "files": [
@@ -5053,7 +5054,7 @@
       ]
     },
     "System.Threading.Thread/4.0.0": {
-      "sha512": "nuUpkup2FbB4Xf62nwWARtm1wQ457fEyR9KvLsCzBSj1yQTtKuqmlSgw/e6aiwB3CiUEAUbZ1IgEvza/m2SYxA==",
+      "sha512": "gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
       "type": "package",
       "path": "system.threading.thread/4.0.0",
       "files": [
@@ -5093,7 +5094,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "dupLOpVBSXb3G/Ab9utLVbOYxZ+hnq5ExVz6Dk9CBlzXm6Znw1GAIOv5HEjlkECZJz40I8zhhxaJHWVsWO484Q==",
+      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "type": "package",
       "path": "system.threading.threadpool/4.0.10",
       "files": [
@@ -5296,7 +5297,7 @@
       ]
     },
     "System.Xml.XPath/4.0.1": {
-      "sha512": "rxtBUK/w9uIL9Kc4idmz4SsoLYfsa+iGgct4qJWOraqtvJB92tCFaFD6Tu4WXnaxduQuqGau771uMjv61vJtZA==",
+      "sha512": "UWd1H+1IJ9Wlq5nognZ/XJdyj8qPE4XufBUkAW59ijsCPjZkZe0MUzKKJFBr+ZWBe5Wq1u1d5f2CYgE93uH7DA==",
       "type": "package",
       "path": "system.xml.xpath/4.0.1",
       "files": [
@@ -5335,7 +5336,7 @@
       ]
     },
     "System.Xml.XPath.XmlDocument/4.0.1": {
-      "sha512": "gQQaCNO5FYxD37SNQvE+yZUNfCt/Y+FgCnead3hu37RsUiwy2cxqRDWPv+Ee+6DlOeV47xaSYYZ6GQW4EhoEXQ==",
+      "sha512": "Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "type": "package",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "files": [
@@ -5386,23 +5387,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Steven.DeRoover\\.nuget\\packages\\": {},
+    "C:\\Users\\Install\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater.Console\\CertificateUpdater.Console.csproj",
+      "projectUniqueName": "C:\\Source\\Private\\main\\source\\CertificateUpdater.Console\\CertificateUpdater.Console.csproj",
       "projectName": "CertificateUpdater.Console",
-      "projectPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater.Console\\CertificateUpdater.Console.csproj",
-      "packagesPath": "C:\\Users\\Steven.DeRoover\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater.Console\\obj\\",
+      "projectPath": "C:\\Source\\Private\\main\\source\\CertificateUpdater.Console\\CertificateUpdater.Console.csproj",
+      "packagesPath": "C:\\Users\\Install\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\Private\\main\\source\\CertificateUpdater.Console\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Steven.DeRoover\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Install\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5410,14 +5411,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/dcanv/_packaging/DCAPackages/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj": {
-              "projectPath": "C:\\Source\\Private\\stovem\\CertificateUpdater\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj"
+            "C:\\Source\\Private\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj": {
+              "projectPath": "C:\\Source\\Private\\main\\source\\CertificateUpdater\\CertificateUpdater.csproj"
             }
           }
         }
