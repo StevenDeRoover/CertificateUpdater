@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.271
+VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CertificateUpdater", "CertificateUpdater\CertificateUpdater.csproj", "{006D3992-47B4-4565-A0C7-B2BA6956F3ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateUpdater", "CertificateUpdater\CertificateUpdater.csproj", "{B5D28E75-890C-4C96-8CC7-22A4E4E1932E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CertificateUpdater.Console", "CertificateUpdater.Console\CertificateUpdater.Console.csproj", "{FED83A79-72C3-4A98-B725-D021CEF417F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateUpdater.Service", "CertificateUpdater.Service\CertificateUpdater.Service.csproj", "{FC889FB3-C9CB-4976-B360-D424CE213006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobService", "JobService\JobService.csproj", "{8FEE1561-8C61-43EA-ACC1-8E883074AE33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateUpdater.Tests", "CertificateUpdater.Tests\CertificateUpdater.Tests.csproj", "{AE897AF7-7D47-4CCA-8979-D9034014513D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{006D3992-47B4-4565-A0C7-B2BA6956F3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{006D3992-47B4-4565-A0C7-B2BA6956F3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{006D3992-47B4-4565-A0C7-B2BA6956F3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{006D3992-47B4-4565-A0C7-B2BA6956F3ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FED83A79-72C3-4A98-B725-D021CEF417F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FED83A79-72C3-4A98-B725-D021CEF417F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FED83A79-72C3-4A98-B725-D021CEF417F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FED83A79-72C3-4A98-B725-D021CEF417F3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8FEE1561-8C61-43EA-ACC1-8E883074AE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8FEE1561-8C61-43EA-ACC1-8E883074AE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8FEE1561-8C61-43EA-ACC1-8E883074AE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8FEE1561-8C61-43EA-ACC1-8E883074AE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D28E75-890C-4C96-8CC7-22A4E4E1932E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D28E75-890C-4C96-8CC7-22A4E4E1932E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D28E75-890C-4C96-8CC7-22A4E4E1932E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D28E75-890C-4C96-8CC7-22A4E4E1932E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC889FB3-C9CB-4976-B360-D424CE213006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC889FB3-C9CB-4976-B360-D424CE213006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC889FB3-C9CB-4976-B360-D424CE213006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC889FB3-C9CB-4976-B360-D424CE213006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE897AF7-7D47-4CCA-8979-D9034014513D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE897AF7-7D47-4CCA-8979-D9034014513D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE897AF7-7D47-4CCA-8979-D9034014513D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE897AF7-7D47-4CCA-8979-D9034014513D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DA04F220-F2E6-4570-871B-621144B37720}
+		SolutionGuid = {83424DA1-F213-49B1-B44E-DDA77432DF90}
 	EndGlobalSection
 EndGlobal
