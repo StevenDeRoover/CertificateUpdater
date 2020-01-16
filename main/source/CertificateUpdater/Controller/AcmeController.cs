@@ -34,11 +34,14 @@ namespace CertificateUpdater.Controller
         {
             Model.Config = config;
             Model.Notifications = notificationsList;
+            _log.LogInfo("Renewing certificate");
             var acme = _contextFactory(config);
 
+            
             IOrderContext order = default(IOrderContext);
 
             bool validated = await _validators[config.Validation].Validate(acme, config, notificationsList, async(domainNames) => {
+                _log.LogInfo("Acme: getting order");
                 order = await acme.NewOrder(domainNames);
                 return order;
             });

@@ -20,6 +20,7 @@ namespace CertificateUpdater.Controller
 
         public void ProcessCertificates()
         {
+            _logger.LogInfo("Processing certificates from config");
             foreach (var certificate in Config.Certificates)
             {
                 ProcessCertificate(certificate);
@@ -33,23 +34,13 @@ namespace CertificateUpdater.Controller
 
             if (acme != null && getCertificate != null && GetCertificate(getCertificate, out bool shouldRenew))
             {
-#if DEBUG
-                shouldRenew = true;
-#endif
-                _logger.LogInfo($"- should renew: {shouldRenew}");
-
-                if (shouldRenew)
-                {
-                    if (acme.Renew(certificate.Configs.OfType<INotifyConfig>().ToList()))
-                    {
-                        SaveNewCertificate(acme.Controller.Model.Certificate, certificate.Configs.OfType<ISaveCertificateConfig>().ToList());
-                        NotifyNewCertificate(acme.Controller.Model.Certificate, certificate.Configs.OfType<INotifyConfig>().ToList());
-                    }
-                }
+                var success = 
+                    shouldRenew &&
+                    acme.Renew(certificate.Configs.OfType<INotifyConfig>().ToList()) &&
+                    SaveNewCertificate(acme.Controller.Model.Certificate, certificate.Configs.OfType<ISaveCertificateConfig>().ToList()) &&
+                    NotifyNewCertificate(acme.Controller.Model.Certificate, certificate.Configs.OfType<INotifyConfig>().ToList());
             }
         }
-
-        
 
         private bool GetCertificate(IGetCertificateConfig getCertificate, out bool shouldRenew)
         {
@@ -62,18 +53,24 @@ namespace CertificateUpdater.Controller
                 _logger.LogInfo($"- Expiration: {certificate.GetExpirationDateString()}");
                 var maxDate = DateTime.Parse(certificate.GetExpirationDateString()).AddDays(-10);
                 shouldRenew = (DateTime.Now.Date >= maxDate.Date);
+#if DEBUG
+                shouldRenew = true;
+#endif
+                _logger.LogInfo($"- should renew: {shouldRenew}");
             }
             return certificate != null;
         }
 
-        private void SaveNewCertificate(string newCertificate, List<ISaveCertificateConfig> saveList)
+        private bool SaveNewCertificate(string newCertificate, List<ISaveCertificateConfig> saveList)
         {
             saveList.ForEach(s => s.Save(newCertificate));
+            return true;
         }
 
-        private void NotifyNewCertificate(string certificate, List<INotifyConfig> list)
+        private bool NotifyNewCertificate(string certificate, List<INotifyConfig> list)
         {
             list.ForEach(l => l.NotifyNewCertificate(certificate));
+            return true;
         }
 
     }

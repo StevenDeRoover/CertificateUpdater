@@ -22,8 +22,10 @@ namespace CertificateUpdater.Acme
 
         public async Task<bool> Validate(AcmeContext acme, AcmeConfig config, List<INotifyConfig> notificationsList, Func<string[], Task<IOrderContext>> getOrder)
         {
+            _log.LogInfo("Acme: Validating DNS order");
             var order = await getOrder(config.DNS.DomainNames);
 
+            _log.LogInfo("Acme: getting authorizations");
             var authz = await order.Authorizations();
 
             var authorizations = authz.Select(a => a.Dns().Result);

@@ -24,7 +24,7 @@ namespace CertificateUpdater.Service.Api
         public IHttpActionResult RenewCertificate() {
             try
             {
-                throw new Exception("Testing");
+                _logger.LogInfo("HTTP GET  /api/certificate/renew");
                 _applicationFactory().Run();
                 return Ok();
             }
