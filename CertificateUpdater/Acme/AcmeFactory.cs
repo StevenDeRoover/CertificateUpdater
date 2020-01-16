@@ -20,7 +20,6 @@ namespace CertificateUpdater.Acme
             _log = log;
         }
         
-
         public async Task<AcmeContext> CreateContext(AcmeConfig config)
         {
             try
@@ -35,6 +34,7 @@ namespace CertificateUpdater.Acme
 
         private async Task<AcmeContext> Login(AcmeConfig config)
         {
+            _log.LogInfo("Logging in to Acme");
             AcmeContext acme = default(AcmeContext);
             if (string.IsNullOrWhiteSpace(config.AccountKey) || !IsKeyValid(config.AccountKey))
             {
