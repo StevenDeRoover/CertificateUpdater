@@ -20,12 +20,12 @@ namespace CertificateUpdater.Service.Api
         }
 
         [HttpGet()]
-        [Route("certificate/renew")]
-        public IHttpActionResult RenewCertificate() {
+        [Route("certificate/renew/{force}")]
+        public IHttpActionResult RenewCertificate(bool force) {
             try
             {
                 _logger.LogInfo("HTTP GET  /api/certificate/renew");
-                _applicationFactory().Run();
+                _applicationFactory().Run(force);
                 return Ok();
             }
             catch (Exception ex)
