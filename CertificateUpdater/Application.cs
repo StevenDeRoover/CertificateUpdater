@@ -15,10 +15,10 @@ namespace CertificateUpdater
             _log = log;
         }
 
-        public void Run()
+        public void Run(bool force)
         {
             _log.LogInfo("Application run");
-            CertificateController.ProcessCertificates();
+            CertificateController.ProcessCertificates(force);
         }
 
         public void Dispose()

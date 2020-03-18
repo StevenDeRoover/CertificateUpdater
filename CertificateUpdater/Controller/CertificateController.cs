@@ -18,22 +18,23 @@ namespace CertificateUpdater.Controller
             _logger = logger;
         }
 
-        public void ProcessCertificates()
+        public void ProcessCertificates(bool force)
         {
             _logger.LogInfo("Processing certificates from config");
             foreach (var certificate in Config.Certificates)
             {
-                ProcessCertificate(certificate);
+                ProcessCertificate(certificate, force);
             }
         }
 
-        private void ProcessCertificate(CertificateModel certificate)
+        private void ProcessCertificate(CertificateModel certificate, bool force)
         {
             var acme = certificate.Configs.OfType<AcmeConfig>().FirstOrDefault();
             var getCertificate = certificate.Configs.OfType<IGetCertificateConfig>().FirstOrDefault();
 
             if (acme != null && getCertificate != null && GetCertificate(getCertificate, out bool shouldRenew))
             {
+                if (force) shouldRenew = true;
                 var success = 
                     shouldRenew &&
                     acme.Renew(certificate.Configs.OfType<INotifyConfig>().ToList()) &&
