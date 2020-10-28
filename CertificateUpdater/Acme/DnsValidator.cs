@@ -93,7 +93,7 @@ namespace CertificateUpdater.Acme
             string pattern = string.Format(@"{0}\s*text =\s*""([\w\-\=]*)""", hostname);
 
             var startInfo = new ProcessStartInfo("nslookup");
-            startInfo.Arguments = string.Format("-type=TXT {0}", hostname);
+            startInfo.Arguments = string.Format("-type=TXT {0} 8.8.8.8", hostname);
             startInfo.RedirectStandardOutput = true;
             startInfo.RedirectStandardError = true;
             startInfo.UseShellExecute = false;
