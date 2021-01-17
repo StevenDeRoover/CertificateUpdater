@@ -20,6 +20,7 @@ namespace CertificateUpdater.DI
             builder.RegisterType<MailNotifyConfig>().Keyed<IConfig>("MailNotify").PropertiesAutowired();
             builder.RegisterType<PushBulletNotifyConfig>().Keyed<IConfig>("PushBulletNotify").PropertiesAutowired();
             builder.RegisterType<SSHSaveConfig>().Keyed<IConfig>("SSHSave").PropertiesAutowired();
+            builder.RegisterType<PFXSaveConfig>().Keyed<IConfig>("PFXSave").PropertiesAutowired();
             builder.RegisterType<SSHCommandNotifyConfig>().Keyed<IConfig>("SSHCommandNotify").PropertiesAutowired();
 
             //acme

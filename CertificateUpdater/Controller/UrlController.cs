@@ -20,12 +20,20 @@ namespace CertificateUpdater.Controller
 
         internal X509Certificate GetCertificate(string url)
         {
-            _log?.LogInfo($"Getting certificate from url '{url}'");
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            response.Close();
+            try
+            {
+                _log?.LogInfo($"Getting certificate from url '{url}'");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                response.Close();
 
-            return request.ServicePoint.Certificate;
+                return request.ServicePoint.Certificate;
+            }
+            catch (Exception ex)
+            {
+                _log?.LogError(ex);
+                return null;
+            }
         }
     }
 }

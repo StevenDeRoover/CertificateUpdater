@@ -1,40 +1,77 @@
 ﻿{
   "Certificates": [
+    //{
+    //  "Acme": {
+    //    "AccountKey": "stovemcom\\accountkey.txt",
+    //    "DomainKey": "stovemcom\\DomainKey.txt",
+    //    "Email": "stevenderoover@gmail.com",
+    //    "Validation": "DNS",
+    //    "DNS": {
+    //      "DomainNames": [ "*.stovem.com" ]
+    //    }
+    //  },
+    //  "Url": {
+    //    //get certificate from url
+    //    "Url": "https://sonarr.stovem.com"
+    //  },
+    //  "MailNotify": {
+    //    "MailHost": "smtp.gmail.com",
+    //    "MailPort": 785,
+    //    "MailUseSSL": true,
+    //    "NotifyDnsMailTemplate": "stovemcom\\NotifyDnsMailTemplate.html"
+
+    //  },
+    //  "PushBulletNotify": {
+    //    "AccountKey": "o.R9eM7I2TEUBRS35b467vp8d46Q07ag87"
+    //  },
+    //  "SSHCommandNotify": {
+    //    "Host": "stovem.com",
+    //    "Username": "root",
+    //    "Password": "k@st33ltj3",
+    //    "NewCertificateCommand": "/etc/init.d/haproxy restart"
+    //  },
+    //  "SSHSave": {
+    //    "Host": "stovem.com",
+    //    "Username": "root",
+    //    "Password": "k@st33ltj3",
+    //    "CertificatePath": "/www/private/certificate.pem"
+    //  }
+    //}
+    //,
     {
       "Acme": {
-        "AccountKey": "stovemcom\\accountkey.txt",
-        "DomainKey":  "stovemcom\\DomainKey.txt",
+        "AccountKey": "decampinavriendenbe\\accountkey.txt",
+        "DomainKey": "decampinavriendenbe\\DomainKey.txt",
         "Email": "stevenderoover@gmail.com",
         "Validation": "DNS",
         "DNS": {
-          "DomainNames": ["*.stovem.com"]
+          "DomainNames": [ "decampinavrienden.be", "www.decampinavrienden.be" ]
         }
       },
       "Url": {
         //get certificate from url
-        "Url": "https://sonarr.stovem.com"
+        "Url": "https://www.decampinavrienden.be"
       },
       "MailNotify": {
         "MailHost": "smtp.gmail.com",
         "MailPort": 785,
         "MailUseSSL": true,
-        "NotifyDnsMailTemplate": "stovemcom\\NotifyDnsMailTemplate.html"
+        "NotifyDnsMailTemplate": "decampinavriendenbe\\NotifyDnsMailTemplate.html"
 
       },
       "PushBulletNotify": {
         "AccountKey": "o.R9eM7I2TEUBRS35b467vp8d46Q07ag87"
       },
       "SSHCommandNotify": {
-        "Host": "stovem.com",
+        "Host": "decampinavrienden.be",
         "Username": "root",
         "Password": "k@st33ltj3",
         "NewCertificateCommand": "/etc/init.d/haproxy restart"
       },
-      "SSHSave": {
-        "Host": "stovem.com",
-        "Username": "root",
-        "Password": "k@st33ltj3",
-        "CertificatePath": "/www/private/certificate.pem"
+      "PFXSave": {
+        "Path": "decampinavriendenbe\\certificate.pfx",
+        "Alias": "DeCampinaVrienden",
+        "Password": "C@mp1n@"
       }
     }
     //,

@@ -45,8 +45,8 @@
     <Reference Include="Autofac.Integration.Mef, Version=4.1.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mef.4.1.0\lib\netstandard2.0\Autofac.Integration.Mef.dll</HintPath>
     </Reference>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
-      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.4\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Certes, Version=2.3.3.0, Culture=neutral, PublicKeyToken=308b9c08e7effcb1, processorArchitecture=MSIL">
       <HintPath>..\packages\Certes.2.3.3\lib\net45\Certes.dll</HintPath>
@@ -90,6 +90,7 @@
     <Compile Include="Config\Interfaces\INotifyConfig.cs" />
     <Compile Include="Config\Interfaces\IRenewCertificateConfig.cs" />
     <Compile Include="Config\Interfaces\ISaveCertificateConfig.cs" />
+    <Compile Include="Config\PFXSaveConfig.cs" />
     <Compile Include="Config\SSHCommandNotifyConfig.cs" />
     <Compile Include="Config\MailNotifyConfig.cs" />
     <Compile Include="Config\PushBulletNotifyConfig.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Controller\AcmeController.cs" />
     <Compile Include="Controller\CertificateController.cs" />
     <Compile Include="Controller\MailNotifyController.cs" />
+    <Compile Include="Controller\PFXSaveController.cs" />
     <Compile Include="Controller\PushBulletNotifyController.cs" />
     <Compile Include="Controller\SSHCommandNotifyController.cs" />
     <Compile Include="Controller\SSHSaveController.cs" />

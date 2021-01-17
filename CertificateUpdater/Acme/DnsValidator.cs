@@ -68,7 +68,6 @@ namespace CertificateUpdater.Acme
 
         private async Task AwaitDnsChanges(Dictionary<string, string> dnsValidations, List<INotifyConfig> notificationsList)
         {
-            notificationsList.ForEach(n => n.NotifyDnsChanges(dnsValidations));
             await Task.Run(() =>
             {
                 bool isValid = false;
@@ -76,7 +75,10 @@ namespace CertificateUpdater.Acme
                 {
                     _log.LogInfo("Checking DNS Validations");
                     isValid = dnsValidations.All(v => IsDnsValid(v.Key, v.Value));
-                    if (!isValid) System.Threading.Thread.Sleep(5000);
+                    if (!isValid) {
+                        notificationsList.ForEach(n => n.NotifyDnsChanges(dnsValidations));
+                        System.Threading.Thread.Sleep(5000);
+                    }
                 }
             });
         }

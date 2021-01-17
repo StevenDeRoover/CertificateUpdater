@@ -1,10 +1,6 @@
 ﻿using Certes.Acme;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CertificateUpdater.Config;
+using System.Collections.Generic;
 
 namespace CertificateUpdater.Models
 {

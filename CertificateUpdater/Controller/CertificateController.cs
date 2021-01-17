@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using CertificateUpdater.Config;
+﻿using CertificateUpdater.Config;
 using CertificateUpdater.Logging;
 using CertificateUpdater.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CertificateUpdater.Controller
 {
@@ -55,11 +55,17 @@ namespace CertificateUpdater.Controller
                 var maxDate = DateTime.Parse(certificate.GetExpirationDateString()).AddDays(-10);
                 shouldRenew = (DateTime.Now.Date >= maxDate.Date);
 #if DEBUG
-                shouldRenew = true;
+                //shouldRenew = true;
 #endif
                 _logger.LogInfo($"- should renew: {shouldRenew}");
             }
-            return certificate != null;
+            else
+            {
+                _logger.LogInfo("Certificate was null");
+                shouldRenew = true;
+                _logger.LogInfo($"- should renew: {shouldRenew}");
+            }
+            return true;
         }
 
         private bool SaveNewCertificate(string newCertificate, List<ISaveCertificateConfig> saveList)
