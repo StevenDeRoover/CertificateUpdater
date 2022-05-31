@@ -77,7 +77,7 @@ namespace CertificateUpdater.Acme
                     isValid = dnsValidations.All(v => IsDnsValid(v.Key, v.Value));
                     if (!isValid) {
                         notificationsList.ForEach(n => n.NotifyDnsChanges(dnsValidations));
-                        System.Threading.Thread.Sleep(5000);
+                        System.Threading.Thread.Sleep(TimeSpan.FromMinutes(30));
                     }
                 }
             });
