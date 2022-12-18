@@ -1,6 +1,7 @@
 ﻿using Hangfire;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace CertificateUpdater.Service.Jobs
     {
         public static void EnqueueJobs()
         {
-            RecurringJob.AddOrUpdate<Application>(nameof(Application), app => app.Run(false), Cron.Daily, TimeZoneInfo.Local);
+            RecurringJob.AddOrUpdate<Application>(nameof(Application), app => app.Run(false), ConfigurationManager.AppSettings["Job::cron"], TimeZoneInfo.Local);
         }
     }
 }
