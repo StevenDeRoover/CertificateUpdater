@@ -60,7 +60,7 @@ namespace CertificateUpdater.Tests
 		[TestMethod]
 		public void Cloudns_DNSRecord_Update()
 		{
-			var client = GetClient();
+			var client = GetClient(); 
 			var zones = client.DNS.Zone["stovem.com"].Records.Request().GetAsync().Result;
 			
 			var acme = zones.FirstOrDefault(v => v.Value.Host == "_acme-challenge");
