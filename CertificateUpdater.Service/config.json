@@ -21,6 +21,10 @@
         "NotifyDnsMailTemplate": "stovemcom\\NotifyDnsMailTemplate.html"
 
       },
+      "CloudnsAPI": {
+        "Key": "8823",
+        "Password": "J@nDR_5445"
+      }
       "PushBulletNotify": {
         "AccountKey": "o.R9eM7I2TEUBRS35b467vp8d46Q07ag87"
       },
