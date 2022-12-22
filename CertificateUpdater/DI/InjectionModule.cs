@@ -22,6 +22,7 @@ namespace CertificateUpdater.DI
             builder.RegisterType<SSHSaveConfig>().Keyed<IConfig>("SSHSave").PropertiesAutowired();
             builder.RegisterType<PFXSaveConfig>().Keyed<IConfig>("PFXSave").PropertiesAutowired();
             builder.RegisterType<SSHCommandNotifyConfig>().Keyed<IConfig>("SSHCommandNotify").PropertiesAutowired();
+			builder.RegisterType<CloudnsAPIConfig>().Keyed<IConfig>("CloudnsAPI").PropertiesAutowired();
 
             //acme
             builder.RegisterType<AcmeFactory>().AsSelf();

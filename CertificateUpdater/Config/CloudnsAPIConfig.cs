@@ -14,7 +14,7 @@ namespace CertificateUpdater.Config
 
 		public CoudnsAPIUpdateController Controller { get; set; }
 
-		public void NotifyDnsChanges(Dictionary<string, string> dnsValidations) => Controller.NotifyDnsChanges(this, dnsValidations);
+		public void NotifyDnsChanges(string domain, Dictionary<string, string> dnsValidations) => Controller.NotifyDnsChanges(this, domain, dnsValidations);
 
 		public void NotifyNewCertificate(string certificate)
 		{

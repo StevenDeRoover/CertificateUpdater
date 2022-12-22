@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using CertificateUpdater.Http;
@@ -15,14 +16,18 @@ namespace CertificateUpdater.Controller
 	{
         public Client Cloudns { get; set; }
 
-        public void NotifyDnsChanges(Config.CloudnsAPIConfig config, Dictionary<string, string> dnsValidations)
+        public void NotifyDnsChanges(Config.CloudnsAPIConfig config, string domain, Dictionary<string, string> dnsValidations)
         {
             //login
-            
+            Cloudns.Key = config.Key;
+            Cloudns.Password = config.Password;
             foreach (var dnsValidation in dnsValidations)
             {
-                _ = Cloudns.DNS.Request().GetAsync().Result;
-            }
+                var records = Cloudns.DNS.Zone[domain].Records.Request().GetAsync().Result;
+				var acme = records.FirstOrDefault(v => v.Value.Host == "_acme-challenge");
+				acme.Value.Record = dnsValidation.Value;
+				Cloudns.DNS.Zone["stovem.com"].Records[acme.Key].Request().PostAsync(acme.Value).Wait();
+			}
         }
     }
 }

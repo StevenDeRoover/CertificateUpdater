@@ -16,7 +16,7 @@ namespace CertificateUpdater.Config
         public string Username { get; set; }
         public string NewCertificateCommand { get; set; }
 
-        public void NotifyDnsChanges(Dictionary<string, string> dnsValidations)
+        public void NotifyDnsChanges(string domain, Dictionary<string, string> dnsValidations)
         {
 
         }

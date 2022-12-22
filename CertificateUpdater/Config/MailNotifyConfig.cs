@@ -8,7 +8,7 @@ namespace CertificateUpdater.Config
 {
     public class MailNotifyConfig : IConfig, INotifyConfig
     {
-        public void NotifyDnsChanges(Dictionary<string, string> dnsValidations)
+        public void NotifyDnsChanges(string domain, Dictionary<string, string> dnsValidations)
         {
         }
 

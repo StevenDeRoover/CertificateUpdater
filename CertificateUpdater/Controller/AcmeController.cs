@@ -36,7 +36,6 @@ namespace CertificateUpdater.Controller
             Model.Notifications = notificationsList;
             _log.LogInfo("Renewing certificate");
             var acme = _contextFactory(config);
-
             
             IOrderContext order = default(IOrderContext);
 

@@ -13,6 +13,7 @@ namespace CertificateUpdater.Service.Jobs
         public static void EnqueueJobs()
         {
             RecurringJob.AddOrUpdate<Application>(nameof(Application), app => app.Run(false), ConfigurationManager.AppSettings["Job::cron"], TimeZoneInfo.Local);
+            RecurringJob.AddOrUpdate<Application>(nameof(Application) + "_force", app => app.Run(true), Cron.Never(), TimeZoneInfo.Local);
         }
     }
 }

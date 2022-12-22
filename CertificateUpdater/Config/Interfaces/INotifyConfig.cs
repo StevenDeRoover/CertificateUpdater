@@ -8,7 +8,7 @@ namespace CertificateUpdater.Config
 {
     public interface INotifyConfig
     {
-        void NotifyDnsChanges(Dictionary<string, string> dnsValidations);
+        void NotifyDnsChanges(string domain, Dictionary<string, string> dnsValidations);
 
         void NotifyNewCertificate(string certificate);
     }

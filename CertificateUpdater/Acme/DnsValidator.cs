@@ -46,9 +46,8 @@ namespace CertificateUpdater.Acme
                 var dnsText = acme.AccountKey.DnsTxt(challenge.Token);
                 dnsValidation.Add(acmeDomain, dnsText);
                 _log.LogInfo($"Add TXT dns for {acmeDomain} to '{dnsText}'");
-            }
-
-            await AwaitDnsChanges(dnsValidation, notificationsList);
+				await AwaitDnsChanges(domainName, dnsValidation, notificationsList);
+			}
 
             Task.WaitAll(authorizations.Select(c => Task.Run(async () =>
             {
@@ -66,7 +65,7 @@ namespace CertificateUpdater.Acme
             return isValid;
         }
 
-        private async Task AwaitDnsChanges(Dictionary<string, string> dnsValidations, List<INotifyConfig> notificationsList)
+        private async Task AwaitDnsChanges(string domain, Dictionary<string, string> dnsValidations, List<INotifyConfig> notificationsList)
         {
             await Task.Run(() =>
             {
@@ -76,7 +75,7 @@ namespace CertificateUpdater.Acme
                     _log.LogInfo("Checking DNS Validations");
                     isValid = dnsValidations.All(v => IsDnsValid(v.Key, v.Value));
                     if (!isValid) {
-                        notificationsList.ForEach(n => n.NotifyDnsChanges(dnsValidations));
+                        notificationsList.ForEach(n => n.NotifyDnsChanges(domain, dnsValidations));
                         System.Threading.Thread.Sleep(TimeSpan.FromMinutes(30));
                     }
                 }
