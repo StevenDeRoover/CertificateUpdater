@@ -54,9 +54,6 @@ namespace CertificateUpdater.Controller
                 _logger.LogInfo($"- Expiration: {certificate.GetExpirationDateString()}");
                 var maxDate = DateTime.Parse(certificate.GetExpirationDateString()).AddDays(-10);
                 shouldRenew = (DateTime.Now.Date >= maxDate.Date);
-#if DEBUG
-                //shouldRenew = true;
-#endif
                 _logger.LogInfo($"- should renew: {shouldRenew}");
             }
             else

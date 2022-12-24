@@ -35,7 +35,7 @@
         "NewCertificateCommand": "/etc/init.d/haproxy restart"
       },
       "SSHSave": {
-        "Host": "stovem.com",
+        "Host": "192.168.1.1",
         "Username": "root",
         "Password": "k@st33ltj3",
         "CertificatePath": "/www/private/certificate.pem"

@@ -26,7 +26,7 @@ namespace CertificateUpdater.Controller
                 var records = Cloudns.DNS.Zone[domain].Records.Request().GetAsync().Result;
 				var acme = records.FirstOrDefault(v => v.Value.Host == "_acme-challenge");
 				acme.Value.Record = dnsValidation.Value;
-				Cloudns.DNS.Zone["stovem.com"].Records[acme.Key].Request().PostAsync(acme.Value).Wait();
+				Cloudns.DNS.Zone[domain].Records[acme.Key].Request().PostAsync(acme.Value).Wait();
 			}
         }
     }

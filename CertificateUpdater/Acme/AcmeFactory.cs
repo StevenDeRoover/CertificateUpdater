@@ -36,16 +36,9 @@ namespace CertificateUpdater.Acme
         {
             _log.LogInfo("Logging in to Acme");
             AcmeContext acme = default(AcmeContext);
-#if DEBUG
-            config.AccountKey = string.Empty;
-#endif
             if (string.IsNullOrWhiteSpace(config.AccountKey) || !IsKeyValid(config.AccountKey))
             {
-#if DEBUG
-				acme = new AcmeContext(WellKnownServers.LetsEncryptStagingV2);
-#else
                 acme = new AcmeContext(WellKnownServers.LetsEncryptV2);
-#endif
 				await acme.NewAccount(config.Email, true);
                 var accountKey = acme.AccountKey.ToPem();
                 _log.LogWarning($"New accountkey for '{config.Email}':");
@@ -55,11 +48,7 @@ namespace CertificateUpdater.Acme
             {
                 string accountKey = File.ReadAllText(config.AccountKey);
                 var key = KeyFactory.FromPem(accountKey);
-#if DEBUG
-				acme = new AcmeContext(WellKnownServers.LetsEncryptStagingV2, key);
-#else
                 acme = new AcmeContext(WellKnownServers.LetsEncryptV2, key);
-#endif
 				await acme.Account();
             }
             return acme;

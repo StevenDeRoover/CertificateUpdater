@@ -1,9 +1,11 @@
 ﻿using CertificateUpdater.Controller;
 using CertificateUpdater.Logging;
+using Hangfire;
 using System;
 
 namespace CertificateUpdater
 {
+    [AutomaticRetry]
     public class Application : IDisposable
     {
         private readonly ILogger _log;
