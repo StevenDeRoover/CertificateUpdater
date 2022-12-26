@@ -1,11 +1,7 @@
-﻿using Renci.SshNet;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CertificateUpdater.Config;
+﻿using CertificateUpdater.Config;
 using CertificateUpdater.Logging;
+using System;
+using WinSCP;
 
 namespace CertificateUpdater.Controller
 {
@@ -20,13 +16,23 @@ namespace CertificateUpdater.Controller
 
         public void Execute(SSHCommandNotifyConfig config, string command)
         {
-            var connectionInfo = new ConnectionInfo(config.Host, config.Username, new PasswordAuthenticationMethod(config.Username, (string)config.Password));
-            using (var client = new SshClient(connectionInfo))
-            {
-                client.Connect();
+			SessionOptions sessionOptions = new SessionOptions
+			{
+				Protocol = Protocol.Scp,
+				HostName = config.Host,
+				UserName = config.Username,
+				Password = config.Password,
+                SshHostKeyPolicy = SshHostKeyPolicy.GiveUpSecurityAndAcceptAny
+			};
+
+			using (Session session = new Session())
+			{
+				// Connect
+				session.Open(sessionOptions);
+
                 _log.LogInfo($"Executing SSH Command '{command}'");
-                var result = client.RunCommand(command);
-                _log.LogInfo(result.Result);
+                var result = session.ExecuteCommand(command);
+                _log.LogInfo(result.Output);
             }
         }
     }

@@ -76,6 +76,9 @@
     <Reference Include="Hangfire.Core, Version=1.7.27.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hangfire.Core.1.7.27\lib\net46\Hangfire.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Hangfire.Dashboard.Authorization, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Dashboard.Authorization.3.0.1\lib\net45\Hangfire.Dashboard.Authorization.dll</HintPath>
+    </Reference>
     <Reference Include="Hangfire.MemoryStorage, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Hangfire.MemoryStorage.1.7.0\lib\net40\Hangfire.MemoryStorage.dll</HintPath>
     </Reference>
@@ -133,8 +136,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\BasicAuthenticationTokens.cs" />
     <Compile Include="Api\CertificateApiController.cs" />
     <Compile Include="Api\ApiService.cs" />
+    <Compile Include="Api\HangFireAuthorizationFilter.cs" />
     <Compile Include="Api\Startup.cs" />
     <Compile Include="Jobs\Jobs.cs" />
     <Compile Include="Logging\CompositeLogger.cs" />

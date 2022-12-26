@@ -19,7 +19,7 @@ namespace CertificateUpdater.Service.Api
 
         public void Start()
         {
-            string baseUri = "http://+:" + this.port;
+            string baseUri = $"http://+:{this.port}/";
 
             Console.WriteLine("Starting web Server...");
             _host = WebApp.Start<Startup>(baseUri);

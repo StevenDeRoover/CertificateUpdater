@@ -5,7 +5,7 @@ using System;
 
 namespace CertificateUpdater
 {
-    [AutomaticRetry]
+    [AutomaticRetry(Attempts =0, OnAttemptsExceeded = AttemptsExceededAction.Delete)]
     public class Application : IDisposable
     {
         private readonly ILogger _log;

@@ -25,7 +25,6 @@ namespace CertificateUpdater.Service
                     s.WhenStarted(tc => tc.Start());
                     s.WhenStopped(tc => tc.Stop());
                 });
-                x.RunAsLocalSystem();
 
                 x.SetDescription("Certificate updater for Let's Encrypt");
                 x.SetDisplayName("CertificateUpdater");
